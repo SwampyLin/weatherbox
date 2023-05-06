@@ -50,10 +50,6 @@ body {
   font-family: "Hind Vadodara", 微軟正黑體;
 }
 
-label {
-  cursor: pointer;
-}
-
 .daybox {
   width: 50%;
   max-width: 400px;
@@ -70,23 +66,10 @@ label {
   top: unset;
 }
 
-.text-area {
-  display: inline-block;
-  position: absolute;
-  bottom: 25px;
-  left: 25px;
-  color: #f3f3f3;
+label {
+  cursor: pointer;
 }
-.text-area .temperature {
-  font-size: 75px;
-  line-height: 80px;
-}
-.text-area .infos {
-  font-size: 13px;
-  opacity: 0.5;
-}
-
-.top {
+label .top {
   height: 330px;
   background: linear-gradient(20deg, #19283d, #1d678f);
   background-size: 100% 300%;
@@ -94,8 +77,22 @@ label {
   position: relative;
   animation: daylights 20s both;
 }
-
-.cloud {
+label .top .text-area {
+  display: inline-block;
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+  color: #f3f3f3;
+}
+label .top .text-area .temperature {
+  font-size: 75px;
+  line-height: 80px;
+}
+label .top .text-area .infos {
+  font-size: 13px;
+  opacity: 0.5;
+}
+label .top .cloud {
   width: 100px;
   height: 36px;
   left: 200px;
@@ -106,7 +103,7 @@ label {
   position: absolute;
   transition: 0.5s;
 }
-.cloud:before, .cloud:after {
+label .top .cloud:before, label .top .cloud:after {
   content: "";
   display: block;
   width: 50px;
@@ -115,16 +112,15 @@ label {
   background-color: #f3f3f3;
   position: absolute;
 }
-.cloud:before {
+label .top .cloud:before {
   left: 16px;
   top: -28px;
 }
-.cloud:after {
+label .top .cloud:after {
   left: 35px;
   top: -20px;
 }
-
-.rain {
+label .top .rain {
   width: 2px;
   height: 10px;
   left: 45px;
@@ -132,18 +128,17 @@ label {
   background-color: #f3f3f3;
   position: absolute;
 }
-.rain-r {
+label .top .rain-r {
   left: 70px;
   bottom: 20px;
   animation-delay: -0.4s;
 }
-.rain-l {
+label .top .rain-l {
   left: 30px;
   bottom: 20px;
   animation-delay: -0.7s;
 }
-
-.moon {
+label .top .moon {
   width: 50px;
   height: 50px;
   border-radius: 100%;
